@@ -2,7 +2,7 @@
 import numpy as np
 from scipy.integrate import solve_ivp
 
-def PFR(F0,v0,k,XA):
+def PFR2(F0,v0,k,XA):
     FA0,FB0=F0
     FA_in=FA0*(1-XA)
     FT0=FA0+FB0
@@ -35,4 +35,4 @@ def PFR(F0,v0,k,XA):
     FC_exit=sol.y_events[0][0][2]
     V=sol.t_events[0][0]
     
-    return [V,FA_exit,FB_exit,FC_exit]
+    return f"Volume of PFR={np.floor(1000*V):1.0f} l"

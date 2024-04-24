@@ -1,1 +1,1 @@
-from .main import PFR
+from .main import PFR2
